@@ -1,0 +1,114 @@
+﻿@import "Colors.less";
+@import "Units.less";
+@import "Cursors.less";
+@import "Text.less";
+
+.all
+{
+    background-color: @gray50;
+    height: 100%;
+
+    .top
+    {
+        .header
+        {
+            background-color: @gray900;
+    
+            .noSelection;
+            .cursorDefault;
+            .white;
+
+            height: @unit;
+            position: relative;
+
+            .headerTitle
+            {
+                .text;
+
+                height: @unit;
+                line-height: @unit;
+                display: inline-block;
+                text-align: left;
+                vertical-align: top;
+
+                padding-left: 12px;
+            }
+        }
+    }
+
+    .bottom
+    {
+        overflow-y: auto;
+        white-space: nowrap;
+
+        position: fixed;
+        top: @unit;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        padding: @unit;
+
+        .label
+        {
+            .text;
+            .gray;
+            .noSelection;
+            .cursorDefault;
+            margin-bottom: 12px;
+        }
+
+        .part
+        {
+            display: inline-block;
+            white-space: nowrap;
+            vertical-align: middle;
+
+            .inputContainer
+            {
+                textarea
+                {
+                    .monospaceText;
+                    .gray;
+
+                    border: 1px solid @gray500;
+                    padding: 8px;
+
+                    width: 100%;
+                    height: 100%;
+
+                    resize: none;
+                }
+
+                width: @unit * 12;
+                height: @unit * 6;
+            }
+
+            .button
+            {
+                background-color: @color1;
+                width: @unit * 3;
+                height: @unit;
+                margin-top: @unit;
+                color: @gray0;
+                line-height: @unit;
+                text-align: center;
+                margin: @unit+32 @unit @unit @unit;
+
+                .text;
+                .noSelection;
+                .cursorDefault;
+            }
+
+            .button:hover
+            {
+                background-color: @color2;
+            }
+
+            .button.disabled
+            {
+                background-color: @color3;
+            }
+        }
+    }
+}
